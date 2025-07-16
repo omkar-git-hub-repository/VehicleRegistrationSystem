@@ -40,7 +40,7 @@ public class AddEmployee {
 		System.out.println("Enter Employee Designation : ");
 		s.setDesignation(sc.nextLine());
 
-		System.out.println("Enter Salary : ");
+		System.out.println("Enter Salary  : ");
 		s.setSalary(sc.nextDouble());
 
 		// 4. Save process

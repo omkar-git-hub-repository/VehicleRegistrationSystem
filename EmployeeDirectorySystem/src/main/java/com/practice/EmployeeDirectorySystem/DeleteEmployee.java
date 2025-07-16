@@ -25,10 +25,11 @@ public class DeleteEmployee {
 		Transaction transaction = session.beginTransaction();
 
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter Student id to Delete : ");
+		System.out.println("Enter Student id to Delete  : ");
 		int StudentIdUserInput = sc.nextInt();
 
 		Employee st = session.find(Employee.class, StudentIdUserInput);
+		
 		session.remove(st);
 		
 		transaction.commit();
