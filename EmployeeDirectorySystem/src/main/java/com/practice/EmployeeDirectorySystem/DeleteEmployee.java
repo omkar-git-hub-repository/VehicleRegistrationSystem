@@ -30,10 +30,10 @@ public class DeleteEmployee {
 
 		Employee st = session.find(Employee.class, StudentIdUserInput);
 		
+		// To remove Employee
 		session.remove(st);
 		
 		transaction.commit();
-		
 		session.close();
 		
 
