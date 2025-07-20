@@ -11,7 +11,7 @@
 		-->
 
 		<property name="hibernate.connection.url">
-			jdbc:mysql://localhost:3306/studentmanagement</property>
+			jdbc:mysql://localhost:3306/vehicledb</property>
 
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">root</property>
@@ -22,7 +22,7 @@
 		<property name="hibernate.format_sql">true</property>
 		<property name="hibernate.hbm2ddl.auto">update</property>
 
-		<mapping class="student.entity.Students" />
+		<mapping class="vehicle.entity.Vehicles" />
 
 	</session-factory>
 </hibernate-configuration>
