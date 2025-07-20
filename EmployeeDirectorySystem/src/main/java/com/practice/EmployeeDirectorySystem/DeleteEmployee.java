@@ -9,8 +9,6 @@ import org.hibernate.Transaction;
 import employee.Entity.Employee;
 import employee.Utility.HibernateUtility;
 
-
-
 public class DeleteEmployee {
 	
 	public void deleteStudentData() {
