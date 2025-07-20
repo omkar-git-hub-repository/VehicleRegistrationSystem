@@ -57,10 +57,10 @@ public class SetBook {
 		this.availableCopies = availableCopies;
 	}
 
-//	@Override
-//	public String toString() {
-//		return "Book [id=" + id + ", Title=" + Title + ", author=" + author + ", isbn=" + isbn + ", availableCopies="
-//				+ availableCopies + "]";
-//	}
+	@Override
+	public String toString() {
+		return "Book [id= " + id + ", Title= " + Title + ", author= " + author + ", isbn= " + isbn + ", availableCopies= "
+				+ availableCopies + "]";
+	}
 
 }

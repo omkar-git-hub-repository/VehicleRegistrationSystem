@@ -21,7 +21,7 @@ public class AddBook {
     //3. Transaction  from session
     Transaction transaction = session.beginTransaction();
 	
-	System.out.println("Add Book Details : ");
+	System.out.println("Add Book Details  : ");
 	
 	SetBook s = new SetBook();
 	Scanner sc = new Scanner (System.in);

@@ -19,8 +19,15 @@ public class App
         Session session = factory.openSession();
         Transaction transaction = session.beginTransaction();
         
-        AddBook a = new AddBook();
-       a.addBook();
+     //   AddBook a = new AddBook();
+      //  a.addBook();
+        
+        
+      //  SearchByAuthor sa = new SearchByAuthor();
+      //  sa.FindByAuthor();
+        
+        UpdateBook u = new UpdateBook();
+        u.updateBook();
         
        //session.persist(transaction); 
        transaction.commit();
