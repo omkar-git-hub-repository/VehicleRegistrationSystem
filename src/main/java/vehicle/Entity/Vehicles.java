@@ -1,7 +1,10 @@
 package vehicle.Entity;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -13,9 +16,22 @@ public class Vehicles {
 	private String OwnerName;
 
 	private String vehicleNumber;
-	private String model;
+	private String modelNo;
 
 	private int registrationYear;
+
+	// Create Obj Of VehicleOwner
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "owner_id")
+	private VehicleOwner vehicleOwner;
+
+	public VehicleOwner getVehicleOwner() {
+		return vehicleOwner;
+	}
+	public void setVehicleOwner(VehicleOwner vehicleOwner) {
+		this.vehicleOwner = vehicleOwner;
+	}
+
 
 	public int getId() {
 		return id;
@@ -29,8 +45,8 @@ public class Vehicles {
 		return OwnerName;
 	}
 
-	public void setOwnerName(String ownerName) {
-		OwnerName = ownerName;
+	public void setOwnerName(String owner) {
+		OwnerName = owner;
 	}
 
 	public String getVehicleNumber() {
@@ -41,12 +57,12 @@ public class Vehicles {
 		this.vehicleNumber = vehicleNumber;
 	}
 
-	public String getModel() {
-		return model;
+	public String getModelNo() {
+		return modelNo;
 	}
 
-	public void setModel(String model) {
-		this.model = model;
+	public void setModelNo(String modelNo) {
+		this.modelNo = modelNo;
 	}
 
 	public int getRegistrationYear() {
@@ -59,8 +75,8 @@ public class Vehicles {
 
 	@Override
 	public String toString() {
-		return "Vehicles [id=" + id + ", OwnerName=" + OwnerName + ", vehicleNumber=" + vehicleNumber + ", model="
-				+ model + ", registrationYear=" + registrationYear + "]";
+		return "Vehicles [id=" + id + ", OwnerName=" + OwnerName + ", vehicleNumber=" + vehicleNumber + ", modelNo="
+				+ modelNo + ", registrationYear=" + registrationYear + "]";
 	}
 
 }
