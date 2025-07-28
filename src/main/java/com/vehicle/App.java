@@ -8,7 +8,7 @@ public class App
     	public static void main(String[] args) {
     		System.out.println("Vehicle Registration System! ");
 
-    		System.out.println("Choose an option:" + "\n1. Add New Vehicles" + "\n2.Search by Model "
+    		System.out.println("Choose an option:" + "\n1. Add New Vehicles" + "\n2. Search by Model "
     				+ "\n3. Delete Vehicle By ID" + "\n4. Update VehicleNo" + "\n5. Exit");
     		Scanner sc = new Scanner(System.in);
     		System.out.println("Enter your Choice");
