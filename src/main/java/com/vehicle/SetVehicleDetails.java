@@ -58,12 +58,6 @@ public class SetVehicleDetails {
         
         // Alternatively, if you want to persist Vehicles separately:
 
-
-
-       
-
-       // session.persist(owner);
-        session.persist(v);
         transaction.commit();
         session.close();
     }
