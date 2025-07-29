@@ -1,9 +1,14 @@
 package vehicle.Entity;
 
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class VehicleStores {
@@ -16,7 +21,11 @@ public class VehicleStores {
     private String owenrName;
 
 
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "Vehicle_Store_ID")
+    private List<VehicleStoreCity> storeCityList;
 
+    
     
 
     public int getId() {
@@ -36,6 +45,16 @@ public class VehicleStores {
     }
     public void setOwenrName(String owenrName) {
         this.owenrName = owenrName;
+    }
+    @Override
+    public String toString() {
+        return "VehicleStores [id=" + id + ", ShowroomCity=" + ShowroomCity + ", owenrName=" + owenrName + "]";
+    }
+    public List<VehicleStoreCity> getStoreCityList() {
+        return storeCityList;
+    }
+    public void setStoreCityList(List<VehicleStoreCity> storeCityList) {
+        this.storeCityList = storeCityList;
     }
 
     

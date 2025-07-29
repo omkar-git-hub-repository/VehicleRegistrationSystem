@@ -6,14 +6,14 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class VehicleStock {
+public class VehicleStoreCity {
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    private int availableStock;
+    private String city;
 
     public int getId() {
         return id;
@@ -23,19 +23,18 @@ public class VehicleStock {
         this.id = id;
     }
 
-    public int getAvailableStock() {
-        return availableStock;
+    public String getCity() {
+        return city;
     }
 
-    public void setAvailableStock(int availableStock) {
-        this.availableStock = availableStock;
+    public void setCity(String city) {
+        this.city = city;
     }
 
     @Override
     public String toString() {
-        return "VehicleStock [id=" + id + ", availableStock=" + availableStock + "]";
+        return "VehicleStoreCity [id=" + id + ", city=" + city + "]";
     }
-    
 
     
 
