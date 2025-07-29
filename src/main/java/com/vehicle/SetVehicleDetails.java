@@ -46,9 +46,9 @@ public class SetVehicleDetails {
         
 
         VehicleOwner owner = new VehicleOwner();
-        owner.setOwnerName("John Doe");
-        owner.setCity("New York");
-        owner.setAge("30");
+        owner.setOwnerName("ALice Johnson");
+        owner.setCity("San Francisco");
+        owner.setAge("54");
 
        List<Vehicles> vList = Arrays.asList(v, v2, v3, v4);
         owner.setVehicles(vList);
