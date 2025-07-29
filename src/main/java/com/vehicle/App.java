@@ -40,8 +40,8 @@ public class App
 			break;
 
     		case 6:
-    			System.out.println("Exiting program. Goodbye!");
-    			System.exit(0); // Terminates the program immediately
+    			SetStoresData std = new SetStoresData();
+				std.setStoreData();
     			break;
     		}
 

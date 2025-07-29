@@ -25,5 +25,10 @@
 		<mapping class="vehicle.Entity.Vehicles" />
 		<mapping class="vehicle.Entity.VehicleOwner" />
 
+		<mapping class="vehicle.Entity.VehicleStores" />
+		<mapping class="vehicle.Entity.VehicleStoreCity" />
+
+
+
 	</session-factory>
 </hibernate-configuration>
