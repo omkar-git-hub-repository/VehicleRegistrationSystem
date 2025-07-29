@@ -1,9 +1,13 @@
 package vehicle.Entity;
 
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.OneToMany;
 
 @Entity
@@ -18,8 +22,18 @@ public class VehicleOwner {
     private String city;
     private String age;
 
-    @OneToMany(mappedBy = "vehicleOwner")
-    private Vehicles vehicles;
+    @OneToMany(cascade =  CascadeType.ALL)
+    @JoinTable(name = "owner_vehicle")
+    private List<Vehicles> vehicles;
+
+    // getter setter
+    public List<Vehicles> getVehicles() {
+        return vehicles;
+    }
+    public void setVehicles(List<Vehicles> vehicles) {
+        this.vehicles = vehicles;
+    }
+
 
     public int getId() {
         return id;
@@ -53,13 +67,7 @@ public class VehicleOwner {
         this.age = age;
     }
 
-    public Vehicles getVehicles() {
-        return vehicles;
-    }
-
-    public void setVehicles(Vehicles vehicles) {
-        this.vehicles = vehicles;
-    }
+  
 
     @Override
     public String toString() {
